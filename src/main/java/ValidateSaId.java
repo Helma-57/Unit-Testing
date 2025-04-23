@@ -66,5 +66,10 @@ public class ValidateSaId {
     private static String extractDateOfBirth(String idNumber) {
         return extractDate(idNumber).toString(); // yyyy-MM-dd
     }
+    private static int calculateAge(String idNumber) {
+        LocalDate birthDate = extractDate(idNumber);
+        LocalDate today = LocalDate.now();
+        return Period.between(birthDate, today).getYears();
+    }
 
 
