@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ValidateSaIdTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-04-23T12:03:59" hostname="DESKTOP-K8K5JRI" time="0.044">
+  <properties/>
+  <testcase name="testNonNumericCharacters()" classname="ValidateSaIdTest" time="0.023"/>
+  <testcase name="testInvalidDate()" classname="ValidateSaIdTest" time="0.007"/>
+  <testcase name="testValidIdNumbers()" classname="ValidateSaIdTest" time="0.002"/>
+  <testcase name="testInvalidLengthTooShort()" classname="ValidateSaIdTest" time="0.001"/>
+  <testcase name="testInvalidChecksum()" classname="ValidateSaIdTest" time="0.001"/>
+  <testcase name="testInvalidLengthTooLong()" classname="ValidateSaIdTest" time="0.001"/>
+  <testcase name="testInvalidCitizenshipDigit()" classname="ValidateSaIdTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
