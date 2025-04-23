@@ -71,5 +71,13 @@ public class ValidateSaId {
         LocalDate today = LocalDate.now();
         return Period.between(birthDate, today).getYears();
     }
+    private static String extractGender(String idNumber) {
+        int genderCode = Integer.parseInt(idNumber.substring(6, 10));
+        return (genderCode >= 5000) ? "Male" : "Female";
+    }
+
+    private static String extractCitizenship(String idNumber) {
+        return (idNumber.charAt(10) == '0') ? "SA Citizen" : "Permanent Resident";
+    }
 
 
