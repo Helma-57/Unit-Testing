@@ -12,3 +12,7 @@ public class ValidateSaIdTest {
     public void testInvalidLengthTooShort() {
         assertFalse(ValidateSaId.isIdNumberValid("20010148000"));
     }
+    @Test
+    public void testInvalidLengthTooLong() {
+        assertFalse(ValidateSaId.isIdNumberValid("20010148000866"));
+    }
