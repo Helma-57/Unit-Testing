@@ -20,4 +20,7 @@ public class ValidateSaIdTest {
     public void testNonNumericCharacters() {
         assertFalse(ValidateSaId.isIdNumberValid("20010A4800086"));
     }
-
+    @Test
+    public void testInvalidDate() {
+        assertFalse(ValidateSaId.isIdNumberValid("9913325800085"));
+    }
