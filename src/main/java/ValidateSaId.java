@@ -14,3 +14,17 @@ public class ValidateSaId {
                 && isValidLuhn(idNumber);
     }
 
+    private static boolean isProperLengthAndDigits(String idNumber) {
+        return idNumber != null && idNumber.length() == 13 && idNumber.matches("\\d{13}");
+    }
+
+    private static boolean isValidDate(String yymmdd) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMdd");
+        try {
+            LocalDate.parse(yymmdd, formatter);
+            return true;
+        } catch (DateTimeParseException e) {
+            return false;
+        }
+    }
+
