@@ -7,3 +7,8 @@ public class ValidateSaIdTest {
         assertTrue(ValidateSaId.isIdNumberValid("2001014800086"));
         assertTrue(ValidateSaId.isIdNumberValid("2909035800085"));
     }
+
+    @Test
+    public void testInvalidLengthTooShort() {
+        assertFalse(ValidateSaId.isIdNumberValid("20010148000"));
+    }
