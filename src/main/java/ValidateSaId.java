@@ -45,3 +45,10 @@ public class ValidateSaId {
         }
         return (sum % 10 == 0);
     }
+
+    private static LocalDate extractDate(String idNumber) {
+        String yymmdd = idNumber.substring(0, 6);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMdd");
+        LocalDate parsed = LocalDate.parse(yymmdd, formatter);
+
+
