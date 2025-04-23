@@ -63,4 +63,8 @@ public class ValidateSaId {
 
         return parsed.withYear(fullYear);
     }
+    private static String extractDateOfBirth(String idNumber) {
+        return extractDate(idNumber).toString(); // yyyy-MM-dd
+    }
+
 
