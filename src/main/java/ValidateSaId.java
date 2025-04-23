@@ -27,4 +27,8 @@ public class ValidateSaId {
             return false;
         }
     }
+    private static boolean isValidCitizenship(char digit) {
+        return digit == '0' || digit == '1';
+    }
+
 
