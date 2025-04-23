@@ -80,4 +80,21 @@ public class ValidateSaId {
         return (idNumber.charAt(10) == '0') ? "SA Citizen" : "Permanent Resident";
     }
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter SA ID number to validate: ");
+        String input = scanner.nextLine();
+
+        if (isIdNumberValid(input)) {
+            System.out.println("✅ ID Number is valid.");
+            System.out.println("Date of Birth: " + extractDateOfBirth(input));
+            System.out.println("Age: " + calculateAge(input));
+            System.out.println("Gender: " + extractGender(input));
+            System.out.println("Citizenship: " + extractCitizenship(input));
+        } else {
+            System.out.println("❌ ID Number is invalid.");
+        }
+    }
+}
+
 
