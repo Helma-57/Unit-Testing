@@ -24,3 +24,8 @@ public class ValidateSaIdTest {
     public void testInvalidDate() {
         assertFalse(ValidateSaId.isIdNumberValid("9913325800085"));
     }
+
+    @Test
+    public void testInvalidCitizenshipDigit() {
+        assertFalse(ValidateSaId.isIdNumberValid("2001014800286"));
+    }
