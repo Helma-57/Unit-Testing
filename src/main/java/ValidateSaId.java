@@ -51,4 +51,16 @@ public class ValidateSaId {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMdd");
         LocalDate parsed = LocalDate.parse(yymmdd, formatter);
 
+        int currentYear = LocalDate.now().getYear();
+        int twoDigitYear = Integer.parseInt(yymmdd.substring(0, 2));
+        int fullYear;
+
+        if (twoDigitYear > (currentYear % 100) + 10) {
+            fullYear = 1900 + twoDigitYear;
+        } else {
+            fullYear = 2000 + twoDigitYear;
+        }
+
+        return parsed.withYear(fullYear);
+    }
 
